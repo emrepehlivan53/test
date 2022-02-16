@@ -28,9 +28,9 @@ $AWS_ACCESS_KEY = “your-aws-access-key-here”
 $AWS_SECRET_KEY = “your-aws-access-secret-here”
 $SECURE_KEY = $(ConvertTo-SecureString -AsPlainText -String $AWS_SECRET_KEY -Force)
 $creds = $(New-Object System.Management.Automation.PSCredential ($AWS_ACCESS_KEY, $SECURE_KEY))
-$from = “localdumps@odeabank.com.tr”
-$to = “yunusemre.pehlivan@odeabank.com.tr”
-Send-MailMessage -From $from -To $to -Subject $logline -Body $logline -SmtpServer mailrelay.odeabank.com.tr -Credential $creds -UseSsl -Port 25
+$from = “localdumps@xyz.com.tr”
+$to = “yunusemre.pehlivan@xyz.com.tr”
+Send-MailMessage -From $from -To $to -Subject $logline -Body $logline -SmtpServer stmpserver.com.tr -Credential $creds -UseSsl -Port 25
 }
 }
 }
